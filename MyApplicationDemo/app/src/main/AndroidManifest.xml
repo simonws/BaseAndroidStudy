@@ -6,6 +6,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -19,8 +20,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".stickylike.StickyLikeActivity" />
+        <activity
+            android:name=".eventstudy.ActivityForTouchEvent"
+            android:launchMode="singleTask" />
+        <activity android:name=".threadstudy.ThreadStudyDemo" />
+        <activity android:name=".service.ServiceBindActivity" />
+        <activity android:name=".lockstudy.LockStudyActivity" />
+
+        <service android:name=".service.DemoService" />
+
+        <activity android:name=".bitmap.BitMapActivity"></activity>
+        <activity android:name=".exception.ExceptionActivity"></activity>
+        <activity android:name=".delegate.TestProxyActivity"></activity>
+
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package com.example.ws.myapplicationdemo.stickylike;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.DataSetObserver;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.ws.myapplicationdemo.MainActivity;
 import com.example.ws.myapplicationdemo.R;
+import com.example.ws.myapplicationdemo.eventstudy.ActivityForTouchEvent;
 
 /**
  * Created by ws on 18-1-23.
@@ -95,6 +97,12 @@ public class StickyLikeActivity extends Activity {
         });
 
         final ImageView imgView = (ImageView) findViewById(R.id.top_id);
+        imgView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(StickyLikeActivity.this, ActivityForTouchEvent.class));
+            }
+        });
 
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
@@ -115,5 +123,30 @@ public class StickyLikeActivity extends Activity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
     }
 }
