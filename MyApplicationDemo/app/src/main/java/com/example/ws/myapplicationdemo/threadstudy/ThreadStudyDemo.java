@@ -21,7 +21,11 @@ public class ThreadStudyDemo extends Activity {
         super.onCreate(savedInstanceState);
 //        new Thread1().start();
 //        new Thread2().start();
-        testBarrier();
+//        testBarrier();
+        Thread yieldThread1 = new YieldThread("yield1");
+        Thread yieldThread2 = new YieldThread("yield2");
+        yieldThread1.start();
+        yieldThread2.start();
     }
 
     public void testCountDownLatch(String[] args) throws InterruptedException {
@@ -126,6 +130,24 @@ public class ThreadStudyDemo extends Activity {
                 }
             }
         }
+    }
+
+    class YieldThread extends Thread {
+        YieldThread(String s) {
+            super(s);
+        }
+
+        public void run() {
+            for (int i = 0; i <= 30; i++) {
+                Log.d(TAG, getName() + ":" + i);
+                if (("t1").equals(getName())) {
+                    if (i == 0) {
+                        yield();
+                    }
+                }
+            }
+        }
+
     }
 
 }
