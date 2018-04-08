@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EclipseCodeFormatterProjectSettings">
+    <option name="selectedGlobalProfile">
+      <Settings>
+        <option name="eclipseVersion" value="ECLIPSE_44" />
+        <option name="enableJSProcessor" value="true" />
+        <option name="formatter" value="ECLIPSE" />
+        <option name="id" value="1495599907602" />
+        <option name="importOrdering" value="ECLIPSE_44" />
+        <option name="name" value="default" />
+        <option name="pathToConfigFileJava" value="$USER_HOME$/code_format_file/android-java-code-format-huyk.xml" />
+        <option name="selectedJavaProfile" value="gionee eclipse java code format" />
+        <option name="useOldEclipseJavaFormatter" value="true" />
+      </Settings>
+    </option>
+  </component>
+</project>

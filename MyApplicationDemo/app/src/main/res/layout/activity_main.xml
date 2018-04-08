@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
         <Button
             android:id="@+id/sticky_btn"
             android:layout_width="match_parent"
@@ -72,6 +73,21 @@
             android:layout_below="@+id/exception_study"
             android:onClick="onClick"
             android:text="@string/proxy_study_string" />
+
+        <Button
+            android:id="@+id/list_study"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/proxy_study"
+            android:onClick="onClick"
+            android:text="@string/listview_string" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/proxy_study"
+            android:text="@string/app_name" />
 
     </RelativeLayout>
 

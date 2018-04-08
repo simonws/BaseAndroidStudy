@@ -6,13 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.ActionMode;
 import android.view.View;
 
 import com.example.ws.myapplicationdemo.bitmap.BitMapActivity;
 import com.example.ws.myapplicationdemo.delegate.TestProxyActivity;
-import com.example.ws.myapplicationdemo.delegate.TestProxyInterface;
 import com.example.ws.myapplicationdemo.eventstudy.ActivityForTouchEvent;
 import com.example.ws.myapplicationdemo.exception.ExceptionActivity;
+import com.example.ws.myapplicationdemo.listviewdemo.ListViewDemoActivity;
 import com.example.ws.myapplicationdemo.lockstudy.LockStudyActivity;
 import com.example.ws.myapplicationdemo.service.ServiceBindActivity;
 import com.example.ws.myapplicationdemo.stickylike.StickyLikeActivity;
@@ -135,8 +136,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.proxy_study:
                 startActivity(new Intent(this, TestProxyActivity.class));
                 break;
+            case R.id.list_study:
+                startActivity(new Intent(this, ListViewDemoActivity.class));
+                break;
             default:
                 break;
         }
+    }
+
+    @Override
+    public void onActionModeStarted(ActionMode mode) {
+        super.onActionModeStarted(mode);
     }
 }

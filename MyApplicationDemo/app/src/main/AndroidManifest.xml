@@ -30,10 +30,10 @@
 
         <service android:name=".service.DemoService" />
 
-        <activity android:name=".bitmap.BitMapActivity"></activity>
-        <activity android:name=".exception.ExceptionActivity"></activity>
-        <activity android:name=".delegate.TestProxyActivity"></activity>
-
+        <activity android:name=".bitmap.BitMapActivity" />
+        <activity android:name=".exception.ExceptionActivity" />
+        <activity android:name=".delegate.TestProxyActivity" />
+        <activity android:name=".listviewdemo.ListViewDemoActivity"></activity>
     </application>
 
 </manifest>
