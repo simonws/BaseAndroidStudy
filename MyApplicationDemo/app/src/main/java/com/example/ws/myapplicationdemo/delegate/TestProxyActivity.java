@@ -27,10 +27,9 @@ public class TestProxyActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-
         TestProxyImpl proxy = new TestProxyImpl();
         TestProxyInterface proxyInterface = (TestProxyInterface) Proxy.newProxyInstance(proxy.getClass()
-            .getClassLoader(), proxy.getClass().getInterfaces(), new ProxyHandleImpl(proxy));
+                .getClassLoader(), proxy.getClass().getInterfaces(), new ProxyHandleImpl(proxy));
         Log.d(TAG, "onResume " + proxyInterface.getClass().getName());
         proxyInterface.sayHello();
     }

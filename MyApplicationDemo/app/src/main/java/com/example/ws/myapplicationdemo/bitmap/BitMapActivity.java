@@ -1,11 +1,11 @@
 package com.example.ws.myapplicationdemo.bitmap;
 
+import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
@@ -15,9 +15,13 @@ import com.example.ws.myapplicationdemo.R;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
-public class BitMapActivity extends AppCompatActivity {
+public class BitMapActivity extends Activity {
     String TAG = "BitMap_Activity";
     ImageView compressImageView;
 
@@ -31,11 +35,7 @@ public class BitMapActivity extends AppCompatActivity {
         imageView.setImageBitmap(preCompressBitmap);
 //        Log.d(TAG, "onCreate1 " + preCompressBitmap.getByteCount());
 //
-//        ByteArrayOutputStream out = new ByteArrayOutputStream();
-//        boolean isCompressOk = preCompressBitmap.compress(Bitmap.CompressFormat.JPEG, 10, out);
-//        int compressedLen = out.toByteArray().length; // 这里out.toByteArray()所返回的byte[]数组大小确实变小了！
-//        ByteArrayInputStream isBm = new ByteArrayInputStream(out.toByteArray());
-//        Bitmap compressedBm = BitmapFactory.decodeStream(isBm, null, null);
+        Bitmap qualityCompressedBitmap = qualityCompress(preCompressBitmap);
 //
 //        Log.d(TAG,
 //                "onCreate2 " + isCompressOk + " == " + compressedLen + " == " + compressedBm.getByteCount());
@@ -46,6 +46,25 @@ public class BitMapActivity extends AppCompatActivity {
 //        compressedBm.compress(Bitmap.CompressFormat.JPEG, 100, out);
         Log.d(TAG, "onCreate３ " + compressImageView.getWidth() + " == " + compressImageView.getHeight()
                 + " == " + bitmap.getWidth() + " == " + bitmap.getHeight());
+    }
+
+    private Bitmap qualityCompress(Bitmap preCompressBitmap) {
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        boolean isCompressOk = preCompressBitmap.compress(Bitmap.CompressFormat.JPEG, 10, out);
+        int compressedLen = out.toByteArray().length; // 这里out.toByteArray()所返回的byte[]数组大小确实变小了！
+        ByteArrayInputStream isBm = new ByteArrayInputStream(out.toByteArray());
+        Bitmap compressedBm = BitmapFactory.decodeStream(isBm, null, null);
+
+        File f = new File("");
+        try {
+            InputStream inputStream = new FileInputStream(f);
+            inputStream.read();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return compressedBm;
     }
 
     @Override

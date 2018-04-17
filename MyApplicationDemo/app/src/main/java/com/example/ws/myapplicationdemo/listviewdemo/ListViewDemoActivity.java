@@ -1,7 +1,7 @@
 package com.example.ws.myapplicationdemo.listviewdemo;
 
+import android.app.Activity;
 import android.database.DataSetObserver;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +10,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.ws.myapplicationdemo.R;
-import com.example.ws.myapplicationdemo.stickylike.StickyLikeActivity;
 
-public class ListViewDemoActivity extends AppCompatActivity {
+public class ListViewDemoActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
