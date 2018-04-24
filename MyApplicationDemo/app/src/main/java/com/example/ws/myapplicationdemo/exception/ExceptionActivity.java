@@ -2,7 +2,6 @@ package com.example.ws.myapplicationdemo.exception;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 
 import com.example.ws.myapplicationdemo.R;
@@ -14,9 +13,9 @@ import com.example.ws.myapplicationdemo.R;
 public class ExceptionActivity extends Activity {
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         setContentView(R.layout.content_main);
-        super.onCreate(savedInstanceState, persistentState);
+        super.onCreate(savedInstanceState);
 
         TestException testException1 = new TestException();
         try {
@@ -24,5 +23,24 @@ public class ExceptionActivity extends Activity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        testError();
+    }
+
+    private void testError() {
+
+        try {
+            deadMethod();
+        } catch (Error e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void deadMethod() {
+        deadMethod();
     }
 }

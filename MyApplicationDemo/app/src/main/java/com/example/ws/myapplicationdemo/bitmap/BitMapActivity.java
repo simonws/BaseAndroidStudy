@@ -108,4 +108,7 @@ public class BitMapActivity extends Activity {
         canvas.drawBitmap(bmp, null, rect, null);
         return result;
     }
+
+
+
 }

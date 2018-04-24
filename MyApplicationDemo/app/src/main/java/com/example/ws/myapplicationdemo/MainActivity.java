@@ -14,7 +14,6 @@ import com.example.ws.myapplicationdemo.delegate.TestProxyActivity;
 import com.example.ws.myapplicationdemo.eventstudy.ActivityForTouchEvent;
 import com.example.ws.myapplicationdemo.exception.ExceptionActivity;
 import com.example.ws.myapplicationdemo.listviewdemo.ListViewDemoActivity;
-import com.example.ws.myapplicationdemo.lockstudy.LockStudyActivity;
 import com.example.ws.myapplicationdemo.service.ServiceBindActivity;
 import com.example.ws.myapplicationdemo.stickylike.StickyLikeActivity;
 import com.example.ws.myapplicationdemo.threadstudy.ThreadStudyDemo;
@@ -123,9 +122,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.service_study:
                 startActivity(new Intent(this, ServiceBindActivity.class));
-                break;
-            case R.id.lock_study:
-                startActivity(new Intent(this, LockStudyActivity.class));
                 break;
             case R.id.bitmap_study:
                 startActivity(new Intent(this, BitMapActivity.class));

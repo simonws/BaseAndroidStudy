@@ -43,14 +43,6 @@
             android:text="@string/service_study_string" />
 
         <Button
-            android:id="@+id/lock_study"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/thread_study"
-            android:onClick="onClick"
-            android:text="@string/lock_study_string" />
-
-        <Button
             android:id="@+id/bitmap_study"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
