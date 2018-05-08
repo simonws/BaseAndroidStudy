@@ -22,7 +22,13 @@ public class ActivityForTouchEvent extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.event_study_layout);
-        TextView textView1 = (TextView) findViewById(R.id.text_id1);
+        MyTextView textView1 = (MyTextView) findViewById(R.id.text_id1);
+        textView1.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
 //        textView1.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {

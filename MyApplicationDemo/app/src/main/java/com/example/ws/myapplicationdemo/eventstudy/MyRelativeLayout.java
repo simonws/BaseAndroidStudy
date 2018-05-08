@@ -36,6 +36,12 @@ public class MyRelativeLayout extends RelativeLayout {
     }
 
     @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+//        return super.onInterceptTouchEvent(ev);
+        return true;
+    }
+
+    @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
 //        if (ev.getAction() == MotionEvent.ACTION_MOVE) {
 //            return false;

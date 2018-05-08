@@ -26,14 +26,13 @@
             android:launchMode="singleTask" />
         <activity android:name=".threadstudy.ThreadStudyDemo" />
         <activity android:name=".service.ServiceBindActivity" />
-        <activity android:name=".lockstudy.LockStudyActivity" />
 
         <service android:name=".service.DemoService" />
 
         <activity android:name=".bitmap.BitMapActivity" />
         <activity android:name=".exception.ExceptionActivity" />
         <activity android:name=".delegate.TestProxyActivity" />
-        <activity android:name=".listviewdemo.ListViewDemoActivity"></activity>
+        <activity android:name=".listviewdemo.ListViewDemoActivity" />
     </application>
 
 </manifest>

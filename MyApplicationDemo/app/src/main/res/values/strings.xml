@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My ApplicationDemo</string>
+    <string name="app_name">MyBaseAndroidStudy</string>
     <string name="action_settings">Settings</string>
     <string name="sticky_like">类粘性头部效果</string>
     <string name="click_event">点击事件</string>
