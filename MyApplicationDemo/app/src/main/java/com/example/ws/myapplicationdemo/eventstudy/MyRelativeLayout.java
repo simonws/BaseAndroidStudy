@@ -28,12 +28,18 @@ public class MyRelativeLayout extends RelativeLayout {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        super.onTouchEvent(event);
-        return true;
+        return super.onTouchEvent(event);
+//        if (event.getAction() == MotionEvent.ACTION_MOVE) {
+//            return false;
+//        }
+//        return true;
     }
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
+//        if (ev.getAction() == MotionEvent.ACTION_MOVE) {
+//            return false;
+//        }
         return super.dispatchTouchEvent(ev);
     }
 }

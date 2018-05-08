@@ -27,10 +27,13 @@ public class MyTextView extends android.support.v7.widget.AppCompatTextView {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        super.onTouchEvent(event);
-        return false;
+        return super.onTouchEvent(event);
     }
 
+    @Override
+    public boolean performClick() {
+        return super.performClick();
+    }
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {

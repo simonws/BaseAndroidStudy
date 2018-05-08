@@ -16,6 +16,7 @@ class SingletonDemo {
                 }
             }
         }
+        Byte by;
         return sInstance;
     }
 }

@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical">
 
     <com.example.ws.myapplicationdemo.eventstudy.MyRelativeLayout
         android:id="@+id/relative_id"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <com.example.ws.myapplicationdemo.eventstudy.MyTextView
-            android:id="@+id/text_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/click_event" />
+            android:id="@+id/text_id1"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="@string/click_text1" />
+
+        <com.example.ws.myapplicationdemo.eventstudy.MyTextView
+            android:id="@+id/text_id2"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/text_id1"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="@string/click_text2" />
 
     </com.example.ws.myapplicationdemo.eventstudy.MyRelativeLayout>
 
 
-</LinearLayout>
+</RelativeLayout>

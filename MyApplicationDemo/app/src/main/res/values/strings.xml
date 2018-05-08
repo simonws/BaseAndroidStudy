@@ -14,4 +14,6 @@
     <string name="exception_study_string">异常</string>
     <string name="proxy_study_string">代理</string>
     <string name="listview_string">列表</string>
+    <string name="click_text2">click_text_2</string>
+    <string name="click_text1">click_text_1</string>
 </resources>
