@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent">
+
+    <Button
+        android:id="@+id/sticky_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:onClick="onClick"
+        android:text="@string/sticky_like" />
+
+    <Button
+        android:id="@+id/click_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sticky_btn"
+        android:onClick="onClick"
+        android:text="@string/click_event" />
+
+    <Button
+        android:id="@+id/thread_study"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/click_event"
+        android:onClick="onClick"
+        android:text="@string/thread_study" />
+
+    <Button
+        android:id="@+id/service_study"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thread_study"
+        android:onClick="onClick"
+        android:text="@string/service_study_string" />
+
+    <Button
+        android:id="@+id/bitmap_study"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thread_study"
+        android:onClick="onClick"
+        android:text="@string/bit_study_string" />
+
+    <Button
+        android:id="@+id/exception_study"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bitmap_study"
+        android:onClick="onClick"
+        android:text="@string/exception_study_string" />
+
+    <Button
+        android:id="@+id/proxy_study"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exception_study"
+        android:onClick="onClick"
+        android:text="@string/proxy_study_string" />
+
+    <Button
+        android:id="@+id/list_study"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/proxy_study"
+        android:onClick="onClick"
+        android:text="@string/listview_string" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/proxy_study"
+        android:text="@string/app_name" />
+
+</merge>
